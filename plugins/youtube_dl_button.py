@@ -338,7 +338,7 @@ async def youtube_dl_call_back(bot, update):
                             )
                         else:
                             media_album_p.append(
-                                pyrogram.InputMediaPhoto(
+                                pyrogram.types.InputMediaPhoto(
                                     media=image
                                 )
                             )
