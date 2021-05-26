@@ -35,7 +35,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
+    if update.from_user.id not in Config.AUTH_USERS:
         await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
         return
     TRChatBase(update.from_user.id, update.text, "/echo")
