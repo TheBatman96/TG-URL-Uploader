@@ -330,7 +330,7 @@ async def youtube_dl_call_back(bot, update):
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                pyrogram.InputMediaPhoto(
+                                pyrogram.inputMediaPhoto(
                                     media=image,
                                     caption=caption,
                                     parse_mode="html"
